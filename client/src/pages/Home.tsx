@@ -10,22 +10,27 @@
  *  1. Hero
  *  2. Introduction + StudyIntro card
  *  3. Logical Progression flow
- *  4. Day-by-day sections (9 days)
+ *  4. Day-by-day sections (8 days, with Four Cups after Thursday)
  *  5. Prophecy Chart
  *  6. Gospel Harmony Table
  *  7. Comparative Gospel Matrix
- *  8. Theological Themes Tracker
- *  9. Theological Bridge (OT/NT flip cards)
- * 10. Conclusion
+ *  8. Covenant Convergence
+ *  9. Theological Themes Tracker
+ * 10. Theological Bridge (OT/NT flip cards)
+ * 11. Narrative Arc (closing sweep)
+ * 12. Conclusion
  */
 
+import CovenantConvergence from "@/components/CovenantConvergence";
 import DayNavigator from "@/components/DayNavigator";
 import DaySection from "@/components/DaySection";
+import FourCups from "@/components/FourCups";
 import GospelHarmonyTable from "@/components/GospelHarmonyTable";
 import GospelMatrix from "@/components/GospelMatrix";
 import HeroSection from "@/components/HeroSection";
 import JourneyTimeline from "@/components/JourneyTimeline";
 import LogicalProgression from "@/components/LogicalProgression";
+import NarrativeArc from "@/components/NarrativeArc";
 import ProphecyChart from "@/components/ProphecyChart";
 import StudyIntro from "@/components/StudyIntro";
 import TheologicalBridge from "@/components/TheologicalBridge";
@@ -92,6 +97,9 @@ export default function Home() {
     }
   }, []);
 
+  // Identify Thursday index to insert Four Cups after it
+  const thursdayIndex = DAYS.findIndex((d) => d.id === "thursday");
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FAF8F3" }}>
       {/* Fixed timeline nav */}
@@ -130,18 +138,18 @@ export default function Home() {
               className="space-y-5"
             >
               <p className="text-[15px] md:text-lg leading-[1.8] text-foreground/85" style={{ fontFamily: "'Source Serif 4', serif" }}>
-                The final week of Jesus Christ's earthly ministry constitutes the most densely documented period in all of ancient literature. The four Gospel writers devote roughly one-third of their combined narratives to these eight days, underscoring the theological weight the early church placed upon the events stretching from the Triumphal Entry to the empty tomb.
+                The final week of Jesus Christ&apos;s earthly ministry constitutes the most densely documented period in all of ancient literature. The four Gospel writers devote roughly one-third of their combined narratives to these eight days, underscoring the theological weight the early church placed upon the events stretching from the Triumphal Entry to the empty tomb.
               </p>
               <p className="text-[15px] md:text-lg leading-[1.8] text-foreground/85" style={{ fontFamily: "'Source Serif 4', serif" }}>
-                This study harmonizes the accounts of Matthew, Mark, Luke, and John, tracing the chronological events, theological themes, key teachings, and the remarkable fulfillment of Old Testament prophecy across each day of Holy Week.
+                This study harmonizes the accounts of Matthew, Mark, Luke, and John, tracing the chronological events, theological themes, key teachings, and the remarkable fulfillment of Old Testament prophecy across each day of Holy Week. It follows the Passover calendar, mapping each day to its Nisan date and showing how the Lamb typology of Exodus 12 is fulfilled with stunning precision.
               </p>
 
               <blockquote className="border-l-4 pl-4 md:pl-5 py-3 my-6 md:my-8" style={{ borderColor: "#B8860B", backgroundColor: "#B8860B06" }}>
                 <p className="text-[15px] md:text-lg italic text-foreground/80 leading-[1.8]" style={{ fontFamily: "'Source Serif 4', serif" }}>
-                  "Was it not necessary that the Christ should suffer these things and enter into his glory?" And beginning with Moses and all the Prophets, he interpreted to them in all the Scriptures the things concerning himself.
+                  &ldquo;Was it not necessary that the Christ should suffer these things and enter into his glory?&rdquo; And beginning with Moses and all the Prophets, he interpreted to them in all the Scriptures the things concerning himself.
                 </p>
                 <cite className="text-sm font-semibold mt-2 block" style={{ color: "#B8860B", fontStyle: "normal" }}>
-                  — Luke 24:26-27
+                  &mdash; Luke 24:26&ndash;27
                 </cite>
               </blockquote>
             </motion.div>
@@ -158,7 +166,7 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Study Intro card — "A Study for the Ages" */}
+            {/* Study Intro card */}
             <StudyIntro />
           </div>
         </section>
@@ -171,12 +179,21 @@ export default function Home() {
       <div className="container max-w-6xl py-8 md:py-12">
         <div className="space-y-16 md:space-y-24">
           {DAYS.map((day, index) => (
-            <div
-              key={day.id}
-              ref={(el) => { sectionRefs.current[day.id] = el; }}
-              data-day-id={day.id}
-            >
-              <DaySection day={day} />
+            <div key={day.id}>
+              <div
+                ref={(el) => { sectionRefs.current[day.id] = el; }}
+                data-day-id={day.id}
+              >
+                <DaySection day={day} />
+              </div>
+
+              {/* Insert Four Cups of Passover after Thursday */}
+              {index === thursdayIndex && (
+                <div className="mt-16 md:mt-24 -mx-4 md:-mx-8 lg:-mx-12">
+                  <FourCups />
+                </div>
+              )}
+
               {/* Decorative divider between days */}
               {index < DAYS.length - 1 && (
                 <div className="flex items-center justify-center gap-3 mt-12 md:mt-16">
@@ -200,11 +217,17 @@ export default function Home() {
       {/* Comparative Gospel Matrix */}
       <GospelMatrix />
 
+      {/* Covenant Convergence — How the covenants meet at Calvary */}
+      <CovenantConvergence />
+
       {/* Theological Themes Tracker */}
       <ThemesTracker />
 
       {/* Theological Bridge — OT/NT flip cards */}
       <TheologicalBridge />
+
+      {/* Narrative Arc — closing editorial sweep */}
+      <NarrativeArc />
 
       {/* Conclusion */}
       <section className="py-12 md:py-20" style={{ backgroundColor: "#2C1810" }}>
@@ -227,10 +250,10 @@ export default function Home() {
             </p>
             <blockquote className="border-l-4 pl-4 md:pl-5 py-3 text-left mb-8" style={{ borderColor: "#B8860B" }}>
               <p className="text-sm md:text-base lg:text-lg italic leading-[1.8]" style={{ fontFamily: "'Source Serif 4', serif", color: "rgba(255,255,255,0.8)" }}>
-                "For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures."
+                &ldquo;For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures.&rdquo;
               </p>
               <cite className="text-sm font-semibold mt-2 block" style={{ color: "#B8860B", fontStyle: "normal" }}>
-                — 1 Corinthians 15:3-4
+                &mdash; 1 Corinthians 15:3&ndash;4
               </cite>
             </blockquote>
             <button

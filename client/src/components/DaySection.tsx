@@ -1,6 +1,6 @@
 import type { DayData } from "@/lib/holyWeekData";
 import { motion } from "framer-motion";
-import { BookOpen, ChevronDown, ChevronUp, ScrollText } from "lucide-react";
+import { BookOpen, ChevronDown, ChevronUp, Clock, GraduationCap, Layers, ScrollText, Wheat } from "lucide-react";
 import { useState } from "react";
 
 interface DaySectionProps {
@@ -133,6 +133,53 @@ function DataTable({ table }: { table: NonNullable<DayData["tables"]>[0] }) {
   );
 }
 
+function InsightCard({
+  icon,
+  label,
+  color,
+  text,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  color: string;
+  text: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const preview = text.length > 120 ? text.slice(0, 120) + "..." : text;
+
+  return (
+    <div
+      className="p-3 md:p-4 rounded-lg border transition-all"
+      style={{ borderColor: `${color}20`, backgroundColor: `${color}05` }}
+    >
+      <div className="flex items-start gap-2 mb-1.5">
+        <div className="shrink-0 mt-0.5" style={{ color }}>
+          {icon}
+        </div>
+        <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color }}>
+          {label}
+        </p>
+      </div>
+      <p
+        className="text-sm leading-relaxed text-foreground/80"
+        style={{ fontFamily: "'Source Serif 4', serif" }}
+      >
+        {open ? text : preview}
+      </p>
+      {text.length > 120 && (
+        <button
+          onClick={() => setOpen(!open)}
+          className="text-xs font-medium mt-1.5 flex items-center gap-1"
+          style={{ color }}
+        >
+          {open ? "Show less" : "Read more"}
+          {open ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function DaySection({ day }: DaySectionProps) {
   return (
     <section
@@ -147,9 +194,16 @@ export default function DaySection({ day }: DaySectionProps) {
             background: `linear-gradient(135deg, ${day.color}E6 0%, ${day.color}80 50%, transparent 100%)`
           }} />
           <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-8">
-            <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase mb-1" style={{ color: "rgba(255,255,255,0.7)" }}>
-              {day.dayName}
-            </p>
+            <div className="flex items-center gap-2 mb-1">
+              <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase" style={{ color: "rgba(255,255,255,0.7)" }}>
+                {day.dayName}
+              </p>
+              {day.nisanDate && (
+                <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ backgroundColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.8)" }}>
+                  {day.nisanDate}
+                </span>
+              )}
+            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
               {day.title}
             </h2>
@@ -170,9 +224,16 @@ export default function DaySection({ day }: DaySectionProps) {
               {day.dayNumber}
             </div>
             <div>
-              <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase" style={{ color: day.color }}>
-                {day.dayName}
-              </p>
+              <div className="flex items-center gap-2">
+                <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase" style={{ color: day.color }}>
+                  {day.dayName}
+                </p>
+                {day.nisanDate && (
+                  <span className="text-[10px] px-2 py-0.5 rounded-full font-medium" style={{ backgroundColor: `${day.color}12`, color: day.color }}>
+                    {day.nisanDate}
+                  </span>
+                )}
+              </div>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: "#2C1810" }}>
                 {day.title}
               </h2>
@@ -215,20 +276,56 @@ export default function DaySection({ day }: DaySectionProps) {
               style={{ borderColor: day.color, backgroundColor: `${day.color}06` }}
             >
               <p className="text-[15px] md:text-base italic text-foreground/85 leading-relaxed" style={{ fontFamily: "'Source Serif 4', serif" }}>
-                "{day.keyVerse.text}"
+                &ldquo;{day.keyVerse.text}&rdquo;
               </p>
               <cite className="text-sm font-semibold mt-2 block" style={{ color: day.color, fontStyle: "normal" }}>
-                — {day.keyVerse.ref}
+                &mdash; {day.keyVerse.ref}
               </cite>
             </motion.blockquote>
           )}
+
+          {/* Scholarly insight cards */}
+          <div className="space-y-3 my-6">
+            {day.lambTypologyNote && (
+              <InsightCard
+                icon={<Wheat className="w-4 h-4" />}
+                label="Passover Lamb Typology"
+                color="#B8860B"
+                text={day.lambTypologyNote}
+              />
+            )}
+            {day.timingNote && (
+              <InsightCard
+                icon={<Clock className="w-4 h-4" />}
+                label="Timing as Theology"
+                color="#8B0000"
+                text={day.timingNote}
+              />
+            )}
+            {day.gospelHarmonyNote && (
+              <InsightCard
+                icon={<Layers className="w-4 h-4" />}
+                label="Gospel Harmony Note"
+                color="#4A1A6B"
+                text={day.gospelHarmonyNote}
+              />
+            )}
+            {day.scholarlyInsight && (
+              <InsightCard
+                icon={<GraduationCap className="w-4 h-4" />}
+                label="Scholarly Insight"
+                color="#2D6A4F"
+                text={day.scholarlyInsight}
+              />
+            )}
+          </div>
 
           {/* Teachings (Thursday) */}
           {day.teachings && day.teachings.length > 0 && (
             <div className="mt-6 md:mt-8">
               <h4 className="text-base font-bold mb-4 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif", color: "#3D4F2F" }}>
                 <BookOpen className="w-4 h-4" />
-                Upper Room Discourse — Key Teachings
+                Upper Room Discourse &mdash; Key Teachings
               </h4>
               <div className="space-y-3">
                 {day.teachings.map((t, i) => (
@@ -246,7 +343,7 @@ export default function DaySection({ day }: DaySectionProps) {
                       <span className="text-[11px] text-muted-foreground font-medium">{t.ref}</span>
                     </div>
                     <p className="text-sm italic text-foreground/80 leading-relaxed" style={{ fontFamily: "'Source Serif 4', serif" }}>
-                      "{t.text}"
+                      &ldquo;{t.text}&rdquo;
                     </p>
                   </motion.div>
                 ))}
@@ -288,7 +385,7 @@ export default function DaySection({ day }: DaySectionProps) {
           {day.gospelEmphasis && (
             <div className="p-4 md:p-5 rounded-xl border" style={{ backgroundColor: "#F8FAF8", borderColor: "#2D6A4F15" }}>
               <h3 className="text-[11px] font-bold uppercase tracking-[0.15em] mb-4" style={{ color: "#3D4F2F" }}>
-                Each Gospel's Emphasis
+                Each Gospel&apos;s Emphasis
               </h3>
               <div className="space-y-3">
                 {day.gospelEmphasis.map((g, i) => {
