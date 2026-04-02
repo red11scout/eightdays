@@ -5,18 +5,35 @@
  * Design: Editorial cartographic style with earth-toned palette,
  * Playfair Display headings, Source Serif 4 body text,
  * journey timeline navigation, and field-guide reference cards.
+ *
+ * Sections (in order):
+ *  1. Hero
+ *  2. Introduction + StudyIntro card
+ *  3. Logical Progression flow
+ *  4. Day-by-day sections (9 days)
+ *  5. Prophecy Chart
+ *  6. Gospel Harmony Table
+ *  7. Comparative Gospel Matrix
+ *  8. Theological Themes Tracker
+ *  9. Theological Bridge (OT/NT flip cards)
+ * 10. Conclusion
  */
 
 import DayNavigator from "@/components/DayNavigator";
 import DaySection from "@/components/DaySection";
 import GospelHarmonyTable from "@/components/GospelHarmonyTable";
+import GospelMatrix from "@/components/GospelMatrix";
 import HeroSection from "@/components/HeroSection";
 import JourneyTimeline from "@/components/JourneyTimeline";
+import LogicalProgression from "@/components/LogicalProgression";
+import ProphecyChart from "@/components/ProphecyChart";
+import StudyIntro from "@/components/StudyIntro";
+import TheologicalBridge from "@/components/TheologicalBridge";
 import ThemesTracker from "@/components/ThemesTracker";
 import { DAYS } from "@/lib/holyWeekData";
 import { motion } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { BookOpen, Share2 } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 export default function Home() {
@@ -140,12 +157,18 @@ export default function Home() {
                 Share This Guide
               </button>
             </div>
+
+            {/* Study Intro card — "A Study for the Ages" */}
+            <StudyIntro />
           </div>
         </section>
       </div>
 
+      {/* Logical Progression — Lamb typology flow */}
+      <LogicalProgression />
+
       {/* Day-by-day sections */}
-      <div className="container max-w-6xl pb-8">
+      <div className="container max-w-6xl py-8 md:py-12">
         <div className="space-y-16 md:space-y-24">
           {DAYS.map((day, index) => (
             <div
@@ -168,11 +191,20 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Prophecy Fulfillments Chart */}
+      <ProphecyChart />
+
       {/* Gospel Harmony Table */}
       <GospelHarmonyTable />
 
+      {/* Comparative Gospel Matrix */}
+      <GospelMatrix />
+
       {/* Theological Themes Tracker */}
       <ThemesTracker />
+
+      {/* Theological Bridge — OT/NT flip cards */}
+      <TheologicalBridge />
 
       {/* Conclusion */}
       <section className="py-12 md:py-20" style={{ backgroundColor: "#2C1810" }}>
