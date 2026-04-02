@@ -144,7 +144,7 @@ export default function Home() {
               className="space-y-5"
             >
               <p className="text-[15px] md:text-lg leading-[1.8] text-foreground/85" style={{ fontFamily: "'Source Serif 4', serif" }}>
-                The final week of Jesus Christ&apos;s earthly ministry constitutes the most densely documented period in all of ancient literature. The four Gospel writers devote roughly one-third of their combined narratives to these eight days, underscoring the theological weight the early church placed upon the events stretching from the Triumphal Entry to the empty tomb.
+                The final week of Jesus Christ&apos;s earthly ministry constitutes the most densely documented period in all of ancient literature. The four Gospel writers devote roughly one-third of their combined narratives to these eight days, underscoring the theological weight the apostolic generation placed upon the events stretching from the Triumphal Entry to the empty tomb.
               </p>
               <p className="text-[15px] md:text-lg leading-[1.8] text-foreground/85" style={{ fontFamily: "'Source Serif 4', serif" }}>
                 This study harmonizes the accounts of Matthew, Mark, Luke, and John, tracing the chronological events, theological themes, key teachings, and the remarkable fulfillment of Old Testament prophecy across each day of Holy Week. It follows the Passover calendar, mapping each day to its Nisan date and showing how the Lamb typology of Exodus 12 is fulfilled with stunning precision.
