@@ -11,25 +11,31 @@
  *  2. Introduction + StudyIntro card
  *  3. Logical Progression flow
  *  4. Day-by-day sections (8 days, with Four Cups after Thursday)
- *  5. Prophecy Chart
- *  6. Gospel Harmony Table
- *  7. Comparative Gospel Matrix
- *  8. Covenant Convergence
- *  9. Theological Themes Tracker
- * 10. Theological Bridge (OT/NT flip cards)
- * 11. Narrative Arc (closing sweep)
- * 12. Conclusion
+ *  5. Major Teachings of Holy Week
+ *  6. Prophecy Chart
+ *  7. Gospel Harmony Table
+ *  8. Comparative Gospel Matrix
+ *  9. Covenant Convergence
+ * 10. Theological Themes Tracker
+ * 11. Theological Bridge (OT/NT flip cards)
+ * 12. Discussion Questions
+ * 13. Narrative Arc (closing sweep)
+ * 14. Closing Prayer
+ * 15. Conclusion
  */
 
+import ClosingPrayer from "@/components/ClosingPrayer";
 import CovenantConvergence from "@/components/CovenantConvergence";
 import DayNavigator from "@/components/DayNavigator";
 import DaySection from "@/components/DaySection";
+import DiscussionQuestions from "@/components/DiscussionQuestions";
 import FourCups from "@/components/FourCups";
 import GospelHarmonyTable from "@/components/GospelHarmonyTable";
 import GospelMatrix from "@/components/GospelMatrix";
 import HeroSection from "@/components/HeroSection";
 import JourneyTimeline from "@/components/JourneyTimeline";
 import LogicalProgression from "@/components/LogicalProgression";
+import MajorTeachings from "@/components/MajorTeachings";
 import NarrativeArc from "@/components/NarrativeArc";
 import ProphecyChart from "@/components/ProphecyChart";
 import StudyIntro from "@/components/StudyIntro";
@@ -208,6 +214,9 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Major Teachings of Holy Week */}
+      <MajorTeachings />
+
       {/* Prophecy Fulfillments Chart */}
       <ProphecyChart />
 
@@ -226,8 +235,14 @@ export default function Home() {
       {/* Theological Bridge — OT/NT flip cards */}
       <TheologicalBridge />
 
+      {/* Discussion Questions for Group Study */}
+      <DiscussionQuestions />
+
       {/* Narrative Arc — closing editorial sweep */}
       <NarrativeArc />
+
+      {/* Closing Prayer */}
+      <ClosingPrayer />
 
       {/* Conclusion */}
       <section className="py-12 md:py-20" style={{ backgroundColor: "#2C1810" }}>
@@ -245,8 +260,11 @@ export default function Home() {
             <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif", color: "#F5E6B8" }}>
               The Week That Changed Everything
             </h2>
-            <p className="text-sm md:text-base lg:text-lg leading-[1.8] mb-8" style={{ fontFamily: "'Source Serif 4', serif", color: "rgba(255,255,255,0.75)" }}>
+            <p className="text-sm md:text-base lg:text-lg leading-[1.8] mb-4" style={{ fontFamily: "'Source Serif 4', serif", color: "rgba(255,255,255,0.75)" }}>
               In the span of eight days, Jesus of Nazareth fulfilled dozens of ancient prophecies written centuries before His birth, delivered the most profound teachings ever recorded, established a new covenant between God and humanity, endured the most unjust trial and brutal execution in history, and conquered death itself by rising from the grave.
+            </p>
+            <p className="text-sm md:text-base lg:text-lg leading-[1.8] mb-8" style={{ fontFamily: "'Source Serif 4', serif", color: "rgba(255,255,255,0.65)" }}>
+              That is why Holy Week still towers over history. It is the week in which God answered sin, death, evil, guilt, and despair with one name: Jesus Christ.
             </p>
             <blockquote className="border-l-4 pl-4 md:pl-5 py-3 text-left mb-8" style={{ borderColor: "#B8860B" }}>
               <p className="text-sm md:text-base lg:text-lg italic leading-[1.8]" style={{ fontFamily: "'Source Serif 4', serif", color: "rgba(255,255,255,0.8)" }}>

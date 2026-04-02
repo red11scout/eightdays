@@ -45,6 +45,7 @@ export interface DayData {
   lambTypologyNote?: string;
   timingNote?: string;
   scholarlyInsight?: string;
+  studyInsight?: string;
 }
 
 export const IMAGES = {
@@ -84,6 +85,7 @@ export const DAYS: DayData[] = [
       { gospel: "John", emphasis: "Identifies Mary as the woman, Judas as the objector, and reveals Judas\u2019 dishonest motive" },
     ],
     gospelHarmonyNote: "A chronological question arises: John 12:1 places the anointing \u201csix days before the Passover,\u201d while Matthew 26:2 and Mark 14:1 place their accounts \u201ctwo days before.\u201d Most scholars (Carson, France, Blomberg) conclude that Matthew and Mark narrate the anointing in a thematic flashback, while John preserves the strict chronological order.",
+    studyInsight: "Mary’s anointing is an act of extravagant devotion that the world calls waste and Jesus calls beautiful. It teaches that true worship is costly, personal, and often misunderstood by those standing nearby. She alone seems to grasp what is coming — and she pours out everything in advance of the burial.",
     lambTypologyNote: "The anointing of Jesus with costly nard parallels the consecration of sacrificial animals in the Old Testament. As the Passover lamb was set apart before slaughter, Mary unknowingly consecrated the Lamb of God for His approaching sacrifice.",
   },
   {
@@ -122,6 +124,7 @@ export const DAYS: DayData[] = [
       { gospel: "Luke", emphasis: "Unique: Jesus weeps over Jerusalem and prophesies its destruction; Pharisees demand He silence the crowd" },
       { gospel: "John", emphasis: "Connects the entry to the raising of Lazarus as the catalyst; the Pharisees lament \u2018the world has gone after him\u2019" },
     ],
+    studyInsight: "Jesus deliberately presents Himself as the promised King, yet He comes lowly and peaceably, not as a conquering nationalist hero. The same moment that feels triumphant also carries sorrow, because Jerusalem does not recognize the time of her visitation.",
     lambTypologyNote: "Nisan 10: The day of lamb selection (Exodus 12:3). As Israel selected its Passover lambs, God presented His Lamb to the nation. The four-day inspection period (Nisan 10\u201314) begins \u2014 every question, trap, and challenge from the religious leaders over the next days constitutes the \u2018inspection\u2019 of the Lamb, who must be found \u2018without blemish\u2019 (Exodus 12:5; 1 Peter 1:19).",
     scholarlyInsight: "Sir Robert Anderson calculated in The Coming Prince (1894) that Daniel 9:24\u201326\u2019s prophecy of \u201csixty-nine weeks\u201d (483 prophetic years of 360 days = 173,880 days) from the decree to rebuild Jerusalem (Nehemiah 2:1\u20138, Nisan 1, 444 B.C.) culminates precisely on Nisan 10, A.D. 33 \u2014 the day of the Triumphal Entry. Whether one accepts Anderson\u2019s exact arithmetic, the convergence of Daniel\u2019s timeline with Palm Sunday remains one of the most remarkable prophetic correspondences in Scripture.",
   },
@@ -152,6 +155,7 @@ export const DAYS: DayData[] = [
       { ot: "Jeremiah 7:11", otText: "Has this house, which is called by my name, become a den of robbers in your eyes?", nt: "Mark 11:17", ntText: "Jesus combines Isaiah and Jeremiah in His rebuke." },
       { ot: "Malachi 3:1-3", otText: "The Lord whom you seek will suddenly come to his temple... He will purify the sons of Levi.", nt: "Mark 11:15-17", ntText: "Jesus arrives at the temple and purifies its worship. Malachi identifies the temple-purifier as \u2018the Lord\u2019 (Adonai) \u2014 another implicit deity claim." },
     ],
+    studyInsight: "The fig tree and the temple belong together. The tree had leaves but no fruit; the temple had activity but lacked holiness, prayer, justice, and true recognition of God. Jesus\u2019 action is not mere irritation. It is prophetic judgment.",
     lambTypologyNote: "Nisan 11: The inspection of the Passover lamb continues. Jesus\u2019 authority over the temple \u2014 the very house of God \u2014 demonstrates that the Lamb is also the Lord of the temple. The fig tree and the temple cleansing together picture God\u2019s judgment on a religious system that has failed to bear fruit.",
     gospelHarmonyNote: "Matthew compresses the fig tree and temple cleansing into a single narrative on Monday. Mark separates them across two days (cursing on Monday, discovery of withering on Tuesday), creating the interpretive \u2018sandwich\u2019 structure. Luke omits the fig tree entirely but includes the cleansing.",
   },
@@ -191,6 +195,7 @@ export const DAYS: DayData[] = [
       { ot: "Psalm 118:22-23", otText: "The stone the builders rejected has become the cornerstone.", nt: "Matthew 21:42", ntText: "Jesus quotes this directly in the Parable of the Wicked Tenants." },
       { ot: "Psalm 110:1", otText: "The Lord said to my Lord, \u2018Sit at my right hand...\u2019", nt: "Matthew 22:44", ntText: "Jesus uses this to demonstrate the Messiah\u2019s divine nature." },
       { ot: "Daniel 9:26", otText: "After the sixty-two weeks, an anointed one shall be cut off.", nt: "Matthew 24:2", ntText: "Jesus predicts the temple\u2019s destruction, fulfilled in 70 A.D." },
+      { ot: "Daniel 7:13-14", otText: "I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man... to him was given dominion and glory and a kingdom.", nt: "Matthew 24:30; 26:64", ntText: "The Son of Man imagery stands behind Jesus\u2019 eschatological authority in the Olivet Discourse and His declaration before the Sanhedrin." },
     ],
     tables: [
       {
@@ -227,6 +232,7 @@ export const DAYS: DayData[] = [
         ],
       },
     ],
+    studyInsight: "Tuesday is the longest and most intense public teaching day of Holy Week. Jesus tears away masks. He exposes the gap between profession and obedience, religion and righteousness, admiration and discipleship. He also prepares His followers to live watchfully in the face of coming judgment and future hope.",
     lambTypologyNote: "Nisan 12: The inspection intensifies. Every faction of Israel\u2019s leadership \u2014 Pharisees (theology), Herodians (politics), Sadducees (philosophy), scribes (law) \u2014 examines the Lamb from every angle. Each finds no blemish. The Lamb passes every test, fulfilling Exodus 12:5: \u201cYour lamb shall be without blemish.\u201d After this day, \u201cno one dared to ask him any more questions\u201d (Mark 12:34) \u2014 the inspection is complete.",
     gospelHarmonyNote: "John places the Greeks\u2019 approach and the grain-of-wheat discourse on this day, while the Synoptics focus on the temple controversies. Together they reveal both the public confrontation and the private turning point: the hour of glorification through suffering has arrived.",
   },
@@ -255,6 +261,7 @@ export const DAYS: DayData[] = [
       { ot: "Zechariah 11:12-13", otText: "They weighed out as my wages thirty pieces of silver... Throw it to the potter.", nt: "Matthew 26:14-16; 27:3-10", ntText: "Judas receives thirty silver coins; later returns them; the money buys the potter\u2019s field." },
       { ot: "Psalm 41:9", otText: "Even my close friend in whom I trusted, who ate my bread, has lifted his heel against me.", nt: "John 13:18", ntText: "Jesus quotes this psalm directly at the Last Supper, identifying Judas." },
     ],
+    studyInsight: "Wednesday is often called Silent Wednesday. It is quiet in public, but dark in the shadows. The plot advances. Judas bargains cheaply with what is infinitely precious. Yet even this hidden treachery unfolds within the sovereign purpose of God.",
     lambTypologyNote: "Nisan 13: The day before slaughter. The lamb has been inspected and found without blemish. Now the preparations for the kill begin. The price is set \u2014 thirty pieces of silver \u2014 and the betrayer is commissioned. The machinery of sacrifice is in motion.",
     scholarlyInsight: "Matthew 27:9 attributes the potter\u2019s field prophecy to \u201cJeremiah\u201d rather than Zechariah. This likely reflects the ancient Jewish practice of citing the first book in a prophetic scroll division (Jeremiah headed the \u201clatter prophets\u201d in some orderings), or a composite quotation drawing from both Zechariah 11:12\u201313 and Jeremiah 18\u201319; 32:6\u20139 (the potter and the field purchase).",
   },
@@ -292,6 +299,7 @@ export const DAYS: DayData[] = [
       { ot: "Jeremiah 31:31-34", otText: "I will make a new covenant... I will put my law within them.", nt: "Luke 22:20", ntText: "\u201cThis cup is the new covenant in my blood.\u201d" },
       { ot: "Zechariah 13:7", otText: "Strike the shepherd, and the sheep will be scattered.", nt: "Matthew 26:31, 56", ntText: "Jesus quotes this directly; the disciples flee at His arrest." },
       { ot: "Exodus 24:8", otText: "Behold the blood of the covenant that the LORD has made with you.", nt: "Matthew 26:28", ntText: "Jesus echoes Moses\u2019 covenant-ratification language: \u201cThis is my blood of the covenant.\u201d" },
+      { ot: "Isaiah 53:7", otText: "He was oppressed, and he was afflicted, yet he opened not his mouth; like a lamb that is led to the slaughter.", nt: "Matthew 26:63; John 18:1", ntText: "The suffering Servant approaches the appointed suffering. Jesus\u2019 silence before His accusers and His willing submission in Gethsemane fulfill this portrait." },
     ],
     teachings: [
       { title: "The New Commandment", text: "By this all people will know that you are my disciples, if you have love for one another.", ref: "John 13:34-35" },
@@ -315,6 +323,7 @@ export const DAYS: DayData[] = [
         ],
       },
     ],
+    studyInsight: "Thursday reveals the heart of Jesus. He loves His own to the end. He interprets His death as covenant sacrifice, kneels to wash feet, teaches His disciples to abide in Him, and submits in agony to the Father\u2019s will in Gethsemane.",
     lambTypologyNote: "Nisan 14: The day of slaughter. \u201cBetween the evenings\u201d (Hebrew: bein ha\u2019arbayim, Exodus 12:6), the Passover lambs were to be killed. Jesus transforms the Passover meal itself, identifying the bread as His body and the cup as His blood \u2014 the new covenant. The Lamb who has been selected, inspected, and found without blemish now prepares for sacrifice.",
     timingNote: "The Synoptic Gospels present the Last Supper as a Passover meal (Mark 14:12\u201316), while John\u2019s Gospel states that Jesus was crucified on \u201cthe day of Preparation of the Passover\u201d (John 19:14). The most widely accepted harmonization (Hoehner) proposes that Jesus followed an earlier calendar (possibly Essene or Galilean), eating the Passover on Thursday evening, while the official temple Passover was slaughtered on Friday \u2014 meaning Jesus died as the lambs were being killed.",
     gospelHarmonyNote: "John alone records the foot washing and the extended Upper Room Discourse (chapters 13\u201317). The Synoptics focus on the institution of the Lord\u2019s Supper, which John omits. Together they provide the complete picture of the evening.",
@@ -396,6 +405,7 @@ export const DAYS: DayData[] = [
         ],
       },
     ],
+    studyInsight: "Good Friday is good because here the innocent dies for the guilty. The cross is not only an example of love. It is the saving act of love, where sin is judged, mercy is secured, and the work of redemption is accomplished.",
     lambTypologyNote: "Nisan 14/15: The Lamb is slain. Jesus was placed on the cross at the third hour (9 AM) \u2014 when the morning tamid sacrifice was offered in the temple. He died at the ninth hour (3 PM) \u2014 when, according to Josephus (Wars 6.9.3) and the Mishnah (Pesahim 5:1), the Passover lambs were being slaughtered in the temple courts. The bookends of the daily sacrificial system frame the crucifixion. As the priests slaughtered thousands of lambs in the temple, the true Lamb died on Golgotha \u2014 rendering the entire system obsolete.",
     timingNote: "The crucifixion\u2019s timing is theology in action: 9 AM (morning tamid) to 3 PM (Passover slaughter). The darkness from noon to 3 PM corresponds to the three hours when the Passover lambs were killed. \u201cChrist, our Passover lamb, has been sacrificed\u201d (1 Corinthians 5:7).",
     gospelHarmonyNote: "Good Friday is the most extensively documented day in ancient literature. All four Gospels narrate it in detail, yet each contributes unique material: Matthew alone records Judas\u2019 death, Pilate\u2019s wife\u2019s dream, Pilate washing his hands, the earthquake, and the guard at the tomb. Mark records the young man who fled naked (14:51\u201352). Luke alone records the trial before Herod, Jesus addressing the women of Jerusalem, and the repentant thief. John alone records the piercing of Jesus\u2019 side, the blood and water, and Nicodemus\u2019 role in the burial.",
@@ -425,6 +435,7 @@ export const DAYS: DayData[] = [
       { ot: "Hosea 6:2", otText: "After two days he will revive us; on the third day he will raise us up.", nt: "1 Corinthians 15:4", ntText: "He was raised on the third day in accordance with the Scriptures." },
       { ot: "Jonah 1:17", otText: "Jonah was in the belly of the fish three days and three nights.", nt: "Matthew 12:40", ntText: "Jesus explicitly invoked Jonah as a type: \u201cSo will the Son of Man be three days and three nights in the heart of the earth.\u201d" },
     ],
+    studyInsight: "Holy Saturday is the ache in the middle. The promise has been spoken, but the answer is not yet seen. It is the day of bewildered grief and hidden hope. God often works most deeply in moments that appear motionless to human eyes.",
     lambTypologyNote: "The Sabbath rest of the Lamb. As the Passover lamb was consumed on the night of Nisan 14/15 and the feast continued, the true Lamb rests in the tomb. The sacrifice has been made; the blood has been applied. Now comes the waiting \u2014 the silence between the cross and the empty tomb.",
     scholarlyInsight: "Jewish inclusive reckoning counts part of Friday as day one, all of Saturday as day two, and part of Sunday as day three \u2014 resolving the apparent tension between \u201cthree days and three nights\u201d (Matthew 12:40) and \u201con the third day\u201d (1 Corinthians 15:4). This counting method is well attested in ancient Jewish sources.",
   },
@@ -475,6 +486,7 @@ export const DAYS: DayData[] = [
         ],
       },
     ],
+    studyInsight: "The resurrection is the Father\u2019s public vindication of the Son and the declaration that the cross has truly accomplished redemption. It is not merely a happy ending. It is the dawn of new creation.",
     lambTypologyNote: "Nisan 16/17: The Feast of Firstfruits (Leviticus 23:9\u201314). On \u201cthe day after the Sabbath\u201d during Passover week, the priest waved the first sheaf of the barley harvest before the LORD as a pledge of the full harvest to come. Christ rose on this exact day. Paul makes the connection explicit: \u201cChrist has been raised from the dead, the firstfruits of those who have fallen asleep\u201d (1 Corinthians 15:20). The wave sheaf was offered for acceptance; Christ was raised and accepted by the Father. The firstfruits guarantee the full harvest \u2014 His resurrection guarantees ours.",
     gospelHarmonyNote: "A note on Mark\u2019s ending: the two oldest Greek manuscripts (Sinaiticus, Vaticanus) end at Mark 16:8. Eusebius and Jerome attest that \u201cthe accurate copies\u201d end there. The style and vocabulary of 16:9\u201320 differ from Mark\u2019s usual prose. However, Irenaeus (c. AD 180) appears to cite Mark 16:19, and the passage appears in the vast majority of manuscripts. No major doctrine depends on its inclusion.",
     scholarlyInsight: "The resurrection appearances follow a remarkable pattern: Jesus appears first to women (in a culture where women\u2019s testimony was not accepted in court), then to individuals, then to groups. If the resurrection were fabricated, the inventors would never have chosen women as the first witnesses. This \u201ccriterion of embarrassment\u201d is one of the strongest historical arguments for the authenticity of the accounts.",

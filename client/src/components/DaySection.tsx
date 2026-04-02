@@ -266,6 +266,22 @@ export default function DaySection({ day }: DaySectionProps) {
             </motion.p>
           ))}
 
+          {/* Study Insight */}
+          {day.studyInsight && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-4 md:p-5 rounded-lg border-l-4 my-6"
+              style={{ borderColor: day.color, backgroundColor: `${day.color}06` }}
+            >
+              <p className="text-[10px] font-bold uppercase tracking-wider mb-2" style={{ color: day.color }}>Meaning &amp; Study Insight</p>
+              <p className="text-sm md:text-[15px] leading-[1.8] text-foreground/85 italic" style={{ fontFamily: "'Source Serif 4', serif" }}>
+                {day.studyInsight}
+              </p>
+            </motion.div>
+          )}
+
           {/* Key verse */}
           {day.keyVerse && (
             <motion.blockquote

@@ -25,10 +25,22 @@ export default function StudyIntro() {
           A Study for the Ages
         </h3>
         <p
+          className="text-sm text-foreground/75 leading-relaxed mb-3"
+          style={{ fontFamily: "'Source Serif 4', serif" }}
+        >
+          Holy Week is the week in which the whole Bible seems to tighten like a drawn bow. The promises to Abraham, the lamb of Passover, the throne of David, the warnings of the prophets, the songs of the righteous sufferer, and the hope of the new covenant all converge here.
+        </p>
+        <p
+          className="text-sm text-foreground/75 leading-relaxed mb-3"
+          style={{ fontFamily: "'Source Serif 4', serif" }}
+        >
+          The week also searches the heart. Do we have leaves without fruit? Religious language without repentance? Admiration without surrender? Holy Week will not let religion stay ornamental. It forces a choice: either Jesus is the rejected Son, or He is the cornerstone.
+        </p>
+        <p
           className="text-sm text-foreground/75 leading-relaxed mb-4"
           style={{ fontFamily: "'Source Serif 4', serif" }}
         >
-          Holy Week is not merely a historical commemoration; it is the "hinge" of human history. Every event — from the rejection of the religious leaders to the silence of the tomb — was calculated and foretold.
+          At the center stands Good Friday. Here justice and mercy meet. Sin is neither excused nor minimized; it is judged. Love is neither sentimental nor abstract; it is costly. The cross is not merely a moving example. It is the decisive act in which the innocent dies for the guilty.
         </p>
         <div className="space-y-2.5 mb-5">
           <div className="flex items-start gap-2">
