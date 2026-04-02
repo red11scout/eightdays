@@ -108,6 +108,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FAF8F3" }}>
+      {/* SEO: Hidden keyword-rich content for crawlers */}
+      <div className="sr-only">
+        <h2>Holy Week Bible Study Guide — Day by Day Through the Passion Week</h2>
+        <p>This comprehensive Holy Week study guide walks through each day of the Passion Week using all four Gospels: Matthew, Mark, Luke, and John. Covering Palm Sunday (Triumphal Entry), Monday (temple cleansing and fig tree), Tuesday (temple controversies, Olivet Discourse, parables), Wednesday (Judas betrayal), Maundy Thursday (Last Supper, foot washing, Gethsemane), Good Friday (trials, crucifixion, seven last words, burial), Holy Saturday (sabbath rest), and Resurrection Sunday (empty tomb, appearances). Includes Old Testament prophecy fulfillments from Psalms, Isaiah, Zechariah, Daniel, Jeremiah, Hosea, and Exodus. Features Gospel harmony tables, Passover Lamb typology, the Four Cups of Passover, covenant convergence, theological themes, discussion questions for small groups and churches, and a closing prayer.</p>
+      </div>
       {/* Fixed timeline nav */}
       <JourneyTimeline activeDay={activeDay} onDayClick={scrollToDay} />
 
@@ -119,7 +124,7 @@ export default function Home() {
 
       {/* Overview / Introduction */}
       <div ref={overviewRef} className="scroll-mt-16">
-        <section className="py-12 md:py-20">
+        <article aria-label="Holy Week study introduction" className="py-12 md:py-20">
           <div className="container max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -133,7 +138,7 @@ export default function Home() {
                 <div className="h-px flex-1 max-w-[60px]" style={{ backgroundColor: "#D4C5A9" }} />
               </div>
               <h2 className="text-xl md:text-3xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#2C1810" }}>
-                The Most Important Week in Human History
+                Holy Week: The Most Important Week in Human History
               </h2>
             </motion.div>
 
@@ -160,6 +165,11 @@ export default function Home() {
               </blockquote>
             </motion.div>
 
+            {/* SEO: Keyword-rich summary paragraph */}
+            <p className="text-[15px] md:text-lg leading-[1.8] text-foreground/85" style={{ fontFamily: "'Source Serif 4', serif" }}>
+              This interactive Bible study guide covers every day of Holy Week in detail: the anointing at Bethany, Palm Sunday&apos;s Triumphal Entry into Jerusalem, Monday&apos;s temple cleansing and fig tree cursing, Tuesday&apos;s five temple controversies and Olivet Discourse, Wednesday&apos;s silent preparation and Judas&apos; betrayal, Maundy Thursday&apos;s Last Supper and Gethsemane prayer, Good Friday&apos;s trials and crucifixion, Holy Saturday&apos;s sabbath rest, and Resurrection Sunday&apos;s empty tomb. Each day includes Gospel references from Matthew, Mark, Luke, and John, Old Testament prophecy fulfillments, and theological commentary.
+            </p>
+
             {/* Share button */}
             <div className="flex justify-center mt-8">
               <button
@@ -175,7 +185,7 @@ export default function Home() {
             {/* Study Intro card */}
             <StudyIntro />
           </div>
-        </section>
+        </article>
       </div>
 
       {/* Logical Progression — Lamb typology flow */}
@@ -245,7 +255,7 @@ export default function Home() {
       <ClosingPrayer />
 
       {/* Conclusion */}
-      <section className="py-12 md:py-20" style={{ backgroundColor: "#2C1810" }}>
+      <section aria-label="Holy Week study conclusion" className="py-12 md:py-20" style={{ backgroundColor: "#2C1810" }}>
         <div className="container max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -293,8 +303,25 @@ export default function Home() {
             Scripture quotations are from the ESV (English Standard Version).
           </p>
           <p className="text-xs text-muted-foreground mt-1" style={{ fontFamily: "'Source Serif 4', serif" }}>
-            A harmonized study across Matthew, Mark, Luke, and John.
+            A harmonized Holy Week Bible study across Matthew, Mark, Luke, and John.
           </p>
+          <nav aria-label="Holy Week study sections" className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1">
+            <span className="text-[10px] text-muted-foreground/60">Palm Sunday</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Temple Cleansing</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Olivet Discourse</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Last Supper</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Crucifixion</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Resurrection</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Prophecy Fulfillment</span>
+            <span className="text-[10px] text-muted-foreground/30">|</span>
+            <span className="text-[10px] text-muted-foreground/60">Gospel Harmony</span>
+          </nav>
         </div>
       </footer>
     </div>

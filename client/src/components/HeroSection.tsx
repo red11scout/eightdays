@@ -8,14 +8,21 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onExplore }: HeroSectionProps) {
   return (
-    <section className="relative w-full overflow-hidden" style={{ minHeight: "100vh" }}>
+    <header
+      role="banner"
+      aria-label="Holy Week Bible Study Guide"
+      className="relative w-full overflow-hidden"
+      style={{ minHeight: "100vh" }}
+    >
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
           src={IMAGES.hero}
-          alt="Ancient Jerusalem at golden hour"
+          alt="Panoramic view of ancient Jerusalem at golden hour — the setting of Holy Week, the Passion of Jesus Christ"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 40%" }}
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to bottom, rgba(26,20,14,0.3) 0%, rgba(26,20,14,0.15) 40%, rgba(26,20,14,0.5) 70%, rgba(250,248,243,1) 100%)"
@@ -52,6 +59,7 @@ export default function HeroSection({ onExplore }: HeroSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
           onClick={onExplore}
+          aria-label="Begin exploring the Holy Week Bible study guide"
           className="flex flex-col items-center gap-2 group"
         >
           <span className="text-xs tracking-[0.3em] uppercase" style={{ color: "rgba(255,255,255,0.7)" }}>
@@ -65,6 +73,6 @@ export default function HeroSection({ onExplore }: HeroSectionProps) {
           </motion.div>
         </motion.button>
       </div>
-    </section>
+    </header>
   );
 }
