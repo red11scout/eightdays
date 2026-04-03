@@ -1,21 +1,23 @@
-# Content Corrections Todo
+# Theological Themes Section Fixes
 
-## CRITICAL / THEOLOGICALLY PROBLEMATIC
-- [ ] 1. Remove "blood comes from the Father" theology from Good Friday — replace with orthodox Chalcedonian Christology
-- [ ] 2. Remove/fix "Passover Friday always aligns" claim from FAQ or any section
+## Header
+- [ ] Change "Six major themes" to "Seven major themes"
 
-## MODERATE-MAJOR
-- [ ] 3. Remove John 2:13-17 from Monday references — it's an early-ministry cleansing, not Passion Week
-- [ ] 4. Fix Thomas appearance: change "Luke's Gospel" to "John's Gospel" (John 20:24-29)
-- [ ] 5. Move Judas betrayal negotiation from Tuesday to Wednesday (Spy Wednesday)
-- [ ] 6. Fix Matthew 21:7 → Matthew 21:17 for Bethany overnight stay
-- [ ] 7. Fix "early church" for 13th-century practice → correct historical period
-
-## MODERATE / MINOR
-- [ ] 8. Fix Mark 12:32-34 → Mark 12:28-34 for Greatest Commandment pericope
-- [ ] 9. Move John 19:38-42 (Nicodemus burial prep) from Saturday to Friday evening
-- [ ] 10. Add Annas hearing (John 18:13) to Thursday/Friday trial sequence
-- [ ] 11. List all 5 resurrection appearances (currently only 4 listed)
-- [ ] 12. Change Jesus' age from "33" to "approximately 33" or similar qualified language
-- [ ] 13. Remove Luke 7 from Wednesday anointing references (it's a separate Galilean event)
-- [ ] 14. Acknowledge Synoptic/Johannine Last Supper timing tension in Thursday section
+## Row Alignment Fixes (shift content to correct day columns)
+- [ ] Jesus as King: Triumphal Entry → Palm Sunday (not Saturday)
+- [ ] Jesus as King: Authority over temple → Monday (not Palm Sunday)
+- [ ] Jesus as King: "King of the Jews" on cross → Good Friday (not Thursday)
+- [ ] Jesus as King: Risen Lord → Resurrection Sunday (not Holy Saturday)
+- [ ] Judgment: Weeping over Jerusalem → Palm Sunday (not Saturday)
+- [ ] Judgment: Fig tree/temple cleansed → Monday (not Palm Sunday)
+- [ ] Judgment: Seven Woes/Olivet → Tuesday (not Monday)
+- [ ] Judgment: Judgment on sinless substitute → Good Friday (not Thursday)
+- [ ] Rejection: Crowds acclaim, leaders plot → Palm Sunday
+- [ ] Rejection: "Crucify Him!" → Good Friday (not Thursday)
+- [ ] Rejection: Tomb sealed → Holy Saturday (not Good Friday)
+- [ ] Rejection: Rejection overturned → Resurrection Sunday (not Holy Saturday)
+- [ ] Sacrifice: Passover Lamb; body & blood → Thursday (not Wednesday)
+- [ ] Sacrifice: Lamb of God slain → Good Friday (not Thursday)
+- [ ] New Covenant: "This cup is the new covenant" → Thursday (not Wednesday)
+- [ ] New Covenant: Covenant ratified in blood → Good Friday (not Thursday)
+- [ ] Resurrection Hope: "He is risen!" → Resurrection Sunday (not Holy Saturday)

@@ -499,12 +499,12 @@ export const GOSPEL_HARMONY = {
 };
 
 export const THEOLOGICAL_THEMES = [
-  { theme: "Jesus as King", days: ["Triumphal Entry", "Authority over temple", "Authority over challengers", "", "", "\u201cKing of the Jews\u201d on the cross", "", "Risen Lord"] },
-  { theme: "Judgment", days: ["Weeping over Jerusalem", "Fig tree cursed; temple cleansed", "Seven Woes; Olivet Discourse", "", "", "Judgment on the sinless substitute", "", "Judgment conquered"] },
-  { theme: "Rejection", days: ["Crowds acclaim, leaders plot", "Leaders enraged", "Leaders silenced", "Conspiracy finalized", "Judas departs", "\u201cCrucify Him!\u201d", "Tomb sealed", "Rejection overturned"] },
-  { theme: "Sacrifice", days: ["", "", "", "", "Passover Lamb; body & blood", "The Lamb of God slain", "", ""] },
-  { theme: "New Covenant", days: ["", "", "", "", "\u201cThis cup is the new covenant\u201d", "Covenant ratified in blood", "", ""] },
-  { theme: "Resurrection Hope", days: ["", "", "Olivet Discourse", "", "\u201cAfter three days I will rise\u201d", "", "", "\u201cHe is risen!\u201d"] },
+  { theme: "Jesus as King", days: ["", "Triumphal Entry", "Authority over temple", "Authority over challengers", "", "", "\u201cKing of the Jews\u201d on the cross", "", "Risen Lord"] },
+  { theme: "Judgment", days: ["", "Weeping over Jerusalem", "Fig tree cursed; temple cleansed", "Seven Woes; Olivet Discourse", "", "", "Judgment on the sinless substitute", "", "Judgment conquered"] },
+  { theme: "Rejection", days: ["", "Crowds acclaim, leaders plot", "Leaders enraged", "Leaders silenced", "Conspiracy finalized", "Judas departs", "\u201cCrucify Him!\u201d", "Tomb sealed", "Rejection overturned"] },
+  { theme: "Sacrifice", days: ["", "", "", "", "", "Passover Lamb; body & blood", "The Lamb of God slain", "", ""] },
+  { theme: "New Covenant", days: ["", "", "", "", "", "\u201cThis cup is the new covenant\u201d", "Covenant ratified in blood", "", ""] },
+  { theme: "Resurrection Hope", days: ["", "", "", "Olivet Discourse", "", "\u201cAfter three days I will rise\u201d", "", "", "\u201cHe is risen!\u201d"] },
   { theme: "Lamb Typology", days: ["Consecration", "Lamb selected (Nisan 10)", "Temple purified; inspection begins", "Inspection continues", "Inspection complete; price set", "Lamb prepared (Nisan 14)", "Lamb slain at hour of sacrifice", "Sabbath rest", "Firstfruits offering"] },
 ];
 

@@ -23,7 +23,7 @@ export default function ThemesTracker() {
             Theological Themes Across Holy Week
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Source Serif 4', serif" }}>
-            Six major themes weave through the eight days, building toward their climax on Good Friday and resolution on Resurrection Sunday.
+            Seven major themes weave through the eight days, building toward their climax on Good Friday and resolution on Resurrection Sunday.
           </p>
         </motion.div>
 
